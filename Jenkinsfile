@@ -2,11 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage("Hello") {
+
+        stage("Build") {
             steps {
-                echo 'Hello, World!dfd'
+                sh '''
+                    docker build -t lynakiddy/register:latest .
+                '''
             }
+
         }
+
     }
 
 }
