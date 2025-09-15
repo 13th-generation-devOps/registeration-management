@@ -11,13 +11,13 @@ pipeline {
             }
         }
 
-        stage("push") {
-            steps {
-                sh '''
-                    docker push lynakiddy/register:latest
-                '''
-            }
-        }
+        // stage("push") {
+        //     steps {
+        //         sh '''
+        //             docker push lynakiddy/register:latest
+        //         '''
+        //     }
+        // }
 
         stage("Deploy") {
             steps {
